@@ -1,0 +1,20 @@
+.meals {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  -webkit-animation: AvailableMeals_meals-appear 1s ease-out forwards;
+  animation: AvailableMeals_meals-appear 1s ease-out forwards;
+}
+@keyframes AvailableMeals_meals-appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
