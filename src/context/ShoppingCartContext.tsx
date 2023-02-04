@@ -41,7 +41,7 @@ export default function ShoppingCartProvider({ children }: ShoppingCartProviderP
 
 
     const cartQuantity = cartItems.reduce(
-        (quantity, item) => item.quantity + quantity,
+        (quantity, item) => item?.quantity + quantity,
         0
     )
     const openCart = () => setIsOpen(true)
@@ -49,17 +49,17 @@ export default function ShoppingCartProvider({ children }: ShoppingCartProviderP
 
     // Get the item by the id in the cart.
     function getItemQuantity(id: number) {
-        return cartItems.find((item) => item.id === id)?.quantity || 0
+        return cartItems.find((item) => item?.id === id)?.quantity || 0
     }
     // Increase the item by the id in the cart.
     function addCartQuantity(id: number, increaseValue: number) {
         setCartItems((currItems) => {
-            if (currItems.find((item) => item.id === id) == null) {
+            if (currItems.find((item) => item?.id === id) == null) {
                 return [...currItems, { id, quantity: increaseValue }]
             } else {
                 return currItems.map((item) => {
-                    if (item.id === id) {
-                        return { ...item, quantity: item.quantity + increaseValue }
+                    if (item?.id === id) {
+                        return { ...item, quantity: item?.quantity + increaseValue }
                     } else {
                         return item
                     }
@@ -69,12 +69,12 @@ export default function ShoppingCartProvider({ children }: ShoppingCartProviderP
     }
     function increaseCartQuantity(id: number) {
         setCartItems((currItems) => {
-            if (currItems.find((item) => item.id === id) == null) {
+            if (currItems.find((item) => item?.id === id) == null) {
                 return [...currItems, { id, quantity: 1 }]
             } else {
                 return currItems.map((item) => {
-                    if (item.id === id) {
-                        return { ...item, quantity: item.quantity + 1 }
+                    if (item?.id === id) {
+                        return { ...item, quantity: item?.quantity + 1 }
                     } else {
                         return item
                     }
@@ -85,12 +85,12 @@ export default function ShoppingCartProvider({ children }: ShoppingCartProviderP
     // decrease the item by the id in the cart.
     function decreaseCartQuantity(id: number) {
         setCartItems((currItems) => {
-            if (currItems.find((item) => item.id === id)?.quantity === 1) {
-                return currItems.filter((item) => item.id !== id)
+            if (currItems.find((item) => item?.id === id)?.quantity === 1) {
+                return currItems.filter((item) => item?.id !== id)
             } else {
                 return currItems.map((item) => {
-                    if (item.id === id) {
-                        return { ...item, quantity: item.quantity - 1 }
+                    if (item?.id === id) {
+                        return { ...item, quantity: item?.quantity - 1 }
                     } else {
                         return item
                     }
@@ -101,7 +101,7 @@ export default function ShoppingCartProvider({ children }: ShoppingCartProviderP
     // remove the item by the id in the cart.
     function removeFromCart(id: number) {
         setCartItems((currItems) => {
-            return currItems.filter((item) => item.id !== id)
+            return currItems.filter((item) => item?.id !== id)
         })
     }
 
