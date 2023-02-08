@@ -5,7 +5,6 @@
 ## Table of Contents
 - [FOODY APP - Internship Report 2023](#foody-app---internship-report-2023)
   - [Table of Contents](#table-of-contents)
-  - [General Information](#general-information)
   - [Technologies Used](#technologies-used)
   - [Features](#features)
   - [Screenshots](#screenshots)
@@ -19,12 +18,6 @@
   - [Learn More](#learn-more)
   - [Contact](#contact)
 
-
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
 
 ## Technologies Used
 - ReactJS - version 18.2.0
