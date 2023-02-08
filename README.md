@@ -1,6 +1,6 @@
 # FOODY APP - Internship Report 2023
 > Foody App is an online food delivery service that allows users to order meals and snacks from restaurants, caterers, and other food providers.
-> Live demo [_here_](https://www.example.com). 
+> Live demo [_here_](https://foody-app-delta.vercel.app/). 
 
 ## Table of Contents
 - [FOODY APP - Internship Report 2023](#foody-app---internship-report-2023)
